@@ -17,7 +17,7 @@
 		width: 270px;
 	}
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
 	#map {
 		height: 400px;
 	}
@@ -26,6 +26,10 @@
 	}
 	#restaurant-container {
   		padding: 500px 0 0 0;
+  		width: 80%;
+	}
+	#reviews-container {
+		width: 80%;
 	}
 	#restaurant-img, #restaurant-cuisine {
   		width: 50%;
@@ -36,10 +40,15 @@
 		padding-top: 50px;
 	}
 }
-@media screen and (min-width: 950px) {
-	main, .inside #maincontent, .inside #map-container {
-	    width: 950px;
+@media screen and (min-width: 1000px) {
+	 #restaurant-container, #reviews-container {
+	    width: 800px;
 	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.inside #maincontent {
+		width: 1000px;
+		margin-left: auto;
 	    margin-right: auto;
 	}
 }
