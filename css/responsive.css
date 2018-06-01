@@ -1,48 +1,45 @@
-@media screen and (min-width: 950px) {
-  main, .inside #maincontent, .inside #map-container {
-    width: 950px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 @media screen and (max-width: 400px) {
-  .filter-options {
-   align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  }
-  .filter-options h2 {
- padding-top: 5px;
-}
-#map {
-	  height: 200px;
+	.filter-options {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 100px;
+	}
+	.filter-options h2 {
+		padding-top: 5px;
+	}
+	#map {
+		height: 200px;
 	}
 }
-
 @media screen and (min-width: 638px) {
 	#restaurants-list li {
-	  width: 270px;
+		width: 270px;
 	}
 }
-
 @media screen and (min-width: 800px) {
 	#map {
-	  height: 400px;
+		height: 400px;
 	}
 	.inside #map-container {
-	  height: 400px;
+		height: 400px;
 	}
 	#restaurant-container {
-  padding: 500px 0 0 0;
-}
+  		padding: 500px 0 0 0;
+	}
 	#restaurant-img, #restaurant-cuisine {
   		width: 50%;
   		float: right;
 	}
 	#restaurant-address {
-	text-align: left;
-	padding-top: 50px;
+		text-align: left;
+		padding-top: 50px;
 	}
-
+}
+@media screen and (min-width: 950px) {
+	main, .inside #maincontent, .inside #map-container {
+	    width: 950px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
