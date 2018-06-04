@@ -140,11 +140,12 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = `photo of ${restaurant.name} restaurant`;
   li.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute('aria-label', `restaurant ${restaurant.name}`;
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -158,6 +159,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('aria-label', `restaurant ${restaurant.name} view details`);
   li.append(more)
 
   return li
