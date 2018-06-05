@@ -37,7 +37,11 @@
 	}
 	#restaurant-address {
 		text-align: left;
-		padding-top: 50px;
+		padding-top: 30px;
+	}
+	caption {
+		display: table-caption;
+		width: 50%;
 	}
 }
 @media screen and (min-width: 1000px) {

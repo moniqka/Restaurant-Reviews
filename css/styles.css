@@ -238,8 +238,16 @@ nav h1 a {
 }
 #restaurant-address {
   font-size: 12pt;
-  margin: 10px 0px;
+  margin: 5px 0px;
   text-align: center;
+}
+caption {
+  display: table-caption;
+  background-color: #333;
+  color: #ddd;
+  font-size: 11pt;
+  font-weight: 300;
+  width: 100%;
 }
 #restaurant-cuisine {
   background-color: #333;
