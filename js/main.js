@@ -4,6 +4,12 @@ let restaurants,
 var map
 var markers = []
 
+
+window.onload = (evt) => {
+    console.log('window loaded');
+    registerServiceWorker();
+};
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -179,4 +185,18 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
+}
+
+/**
+ * Register Service Worker
+ */
+function registerServiceWorker() {
+  // if service worker isn't supported by the browser
+  if (!navigator.serviceWorker) return;
+
+    navigator.serviceWorker.register('/sw.js').then((reg) => {
+      console.log('Registration worked!');
+    }).catch((err) => {
+      console.log('Registration failed!');
+    });
 }
