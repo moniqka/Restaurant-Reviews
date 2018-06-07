@@ -1,4 +1,10 @@
-const cacheName = 'restaurant-v1';
+/**
+ * Help Resources:
+ * https://developers.google.com/web/fundamentals/primers/service-workers/
+ * Lesson 13: Introducing to service worker
+ */
+
+const staticCacheName = 'restaurant-v1';
 const urlsToCache = [
       './',
       './index.html',
@@ -32,10 +38,39 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
-      console.log('Installing Service Worker...');
+      //console.log('installing');
       event.waitUntil(
-            caches.open(cacheName).then(cache => {
+            caches.open(staticCacheName).then(cache => {
+                  //console.log("cashing");
                   return cache.addAll(urlsToCache)
             })
       );
+});
+
+self.addEventListener('activate', (event) => {
+      //console.log('activating');
+      event.waitUntil(
+            caches.keys().then(cacheNames => {
+                  return Promise.all(
+                        cacheNames.filter(cacheName => {
+                              return cacheName.startsWith('restaurant-') &&
+                                     cacheName != staticCacheName;
+                        }).map(cacheName => {
+                              return caches.delete(cacheName);
+                        })
+                  );
+            })
+      )
+});
+
+self.addEventListener('fetch', event => {
+      //console.log('fetching');
+      event.respondWith(
+            caches.match(event.request).then(response => {
+                  if (response) {
+                        return response;
+                  }
+                  return fetch(event.request)
+            })
+      )
 });
