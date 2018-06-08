@@ -4,9 +4,8 @@ let restaurants,
 var map
 var markers = []
 
-
 window.onload = (evt) => {
-    console.log('window loaded');
+    //console.log('window loaded');
     registerServiceWorker();
 };
 
