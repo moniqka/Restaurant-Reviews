@@ -50,10 +50,13 @@ self.addEventListener('install', event => {
     );
 });
 
+
+//"Only caching needs to be implemented, no other ServiceWorker features."
+//READ IN Project Instructions & Rubric after implemented extra features.
 /**
  * Delete old cache and activate new service worker
  */
-self.addEventListener('activate', (event) => {
+/*self.addEventListener('activate', (event) => {
     //console.log('activating');
     event.waitUntil(
         caches.keys().then(cacheNames => {
@@ -67,7 +70,7 @@ self.addEventListener('activate', (event) => {
             );
         })
     );
-});
+});*/
 
 /**
  * Fetch cached files
