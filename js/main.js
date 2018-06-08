@@ -5,8 +5,8 @@ var map
 var markers = []
 
 window.onload = (evt) => {
-    //console.log('window loaded');
-    registerServiceWorker();
+  //console.log('window loaded');
+  registerServiceWorker();
 };
 
 /**
